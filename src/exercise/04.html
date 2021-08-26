@@ -39,17 +39,17 @@
       )
     }
 
-    const PropTypes = {
-      messageProps(props, propName, componentName) {
-        if (typeof props[propName] !== 'string') {
-          return new Error ('greeting and subject must be strings')
-        }
-      }
-    }
+    // const PropTypes = {
+    //   messageProps(props, propName, componentName) {
+    //     if (typeof props[propName] !== 'string') {
+    //       return new Error ('greeting and subject must be strings')
+    //     }
+    //   }
+    // }
 
-    Message.PropTypes = {
-      Message.props.greeting: PropTypes.string,
-      Message.props
+    Message.propTypes = {
+      subject: PropTypes.string.isRequired,
+      greeting: PropTypes.string.isRequired,
     }
     
     const element = <Message greeting = 'Hello' subject = 'World'/>
